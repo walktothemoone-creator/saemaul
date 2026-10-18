@@ -8,7 +8,9 @@
 
 Saemaul Undong (새마을운동, "New Village Movement") was a rural development movement launched in South Korea in 1970. Villages improved roads, housing, and farming under three guiding virtues: diligence (근면, geunmyeon), self-help (자조, jajo), and cooperation (협동, hyeopdong). Its records were inscribed on UNESCO's Memory of the World Register in 2013. The movement has been both praised as a model for escaping poverty and criticized for its top-down, state-led character under an authoritarian government.
 
-This document does not attempt to settle that historical debate. It extracts from the movement a set of principles for individuals living in the age of artificial intelligence, and connects them with Adam Smith's two great works and Leo Tolstoy's story "What Men Live By."
+This document does not attempt to settle that historical debate. It extracts from the movement a set of principles for individuals living in the age of artificial intelligence.
+
+It does so by reading four texts over one another: Park Chung-hee's handwritten planning note on Saemaul Undong (26 April 1972), Adam Smith's The Theory of Moral Sentiments (1759) and The Wealth of Nations (1776), and Leo Tolstoy's story "What Men Live By" (1885). The note says what diligence, self-help and cooperation were meant to do; Smith's two books explain the conditions under which such virtues work; Tolstoy asks what all of it is for. That is why those names recur in the pages below.
 
 ## The Root Spirit: People Live by Love
 

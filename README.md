@@ -25,8 +25,14 @@ and criticized as top-down mobilization under an authoritarian state.
 
 *Saemaul Action Theory* does not try to settle that argument. It is a **normative reinterpretation**:
 it takes from the movement's collective form the one thing worth carrying into the age of AI — the
-spirit of individual self-reliance — and joins it to Adam Smith's two works and to Tolstoy's
-"What Men Live By."
+spirit of individual self-reliance.
+
+That reinterpretation comes from reading four texts over one another: **Park Chung-hee's handwritten
+planning note on Saemaul Undong** (26 April 1972 — the primary source in this repository), Adam
+Smith's **The Theory of Moral Sentiments** (1759) and **The Wealth of Nations** (1776), and Tolstoy's
+**"What Men Live By"** (1885). The note says what diligence, self-help and cooperation were meant to
+do; Smith's two books explain the conditions under which such virtues work; Tolstoy asks what all of
+it is for. Saemaul MCP grew out of reading them together.
 
 ### The chain of three virtues
 
@@ -73,18 +79,6 @@ of their judgment. In the AI age that shadow returns as the risk of handing our 
 
 ### What AI cannot replace
 
-That order — inward mirror first, outward mirror second — is not an accident. *The Theory of Moral
-Sentiments* came seventeen years before *The Wealth of Nations*. A person living inside a society
-takes the feeling and imagination that rise up in them and shares it; that sharing travels through a
-medium, becomes something people exchange, and the economy grows on top of it. The first is a moral
-sentiment, which only a human has. The second is built upon it.
-
-AI can render imagination as text, video or a metaverse, but what it renders is not a moral sentiment
-another human recognizes in themselves. Expression does not stand in for feeling. So the work left to
-people is to read, to imagine in the humanist sense, to express what they feel and let it grow.
-
-### What AI cannot replace
-
 People say AI will bring catastrophe. It has the capacity to. What it does not have is the capacity
 to replace us — not the history and civilisation people have already built, not the ones they have
 yet to build, not the development of society that happens in between.
@@ -117,9 +111,6 @@ So the theory needs an apparatus: primary records of what the movement actually 
 that tested it, criticism that contests it, and a way for anyone — or anyone's agent — to pull the
 evidence up in seconds and cite it precisely. That apparatus is this MCP server. The philosophy is
 the purpose; the server is the tool.
-
-This is also what the tool is *for*. Technology should not take over human judgment; it should put
-the evidence in front of a person so they can read, feel, and argue it out for themselves.
 
 It is built so the argument stays honest:
 
