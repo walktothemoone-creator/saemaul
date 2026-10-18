@@ -7,7 +7,7 @@ An MCP server that makes sources on the Saemaul Undong (새마을운동, South K
 Movement", 1970s) fast to find and safe to cite, from any MCP-capable agent — Claude, ChatGPT,
 Cursor, VS Code, Codex and others.
 
-[한국어](README.ko.md) · [Action Theory (full text)](docs/action-theory.en.md) · [Rights notice](NOTICE.md) · [Contributing](CONTRIBUTING.md) · [Maintenance](docs/maintenance.md) · [Changelog](CHANGELOG.md) · [Client setup](docs/clients.md)
+[한국어](README.ko.md) · [Action Theory (full text)](docs/action-theory.en.md) · [Rights notice](NOTICE.md) · [Contributing](CONTRIBUTING.md) · [Maintenance](docs/maintenance.md) · [Change record](docs/memo/README.md) · [Client setup](docs/clients.md)
 
 ---
 

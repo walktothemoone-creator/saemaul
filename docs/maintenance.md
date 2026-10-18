@@ -2,7 +2,9 @@
 
 이 저장소는 끝나는 프로젝트가 아닙니다. 자료가 더해지고, 판독이 고쳐지고, 행동론이 다시 쓰입니다.
 그래서 **무엇이 언제 어떻게 바뀌었는지 남기는 규칙**이 필요합니다. 이 문서가 그 규칙이고,
-바뀐 내용 자체는 [CHANGELOG.md](../CHANGELOG.md)에 쌓입니다.
+바뀐 내용 자체는 [docs/memo/](memo/README.md)에 쌓입니다. 변경 하나에 메모 하나를 남기고,
+`memo/CHANGELOG.md`에 한 줄로 요약합니다. 에이전트가 따르는 절차는
+[`git_change_memo_skill.md`](../git_change_memo_skill.md)에 있습니다.
 
 자료를 더하고 고치는 방법은 [CONTRIBUTING.md](../CONTRIBUTING.md)에 있습니다. 이 문서는 그 위에서
 **저장소 전체가 버전으로 관리되게** 하는 규칙만 다룹니다.
@@ -30,11 +32,11 @@
 |---|---|
 | `pyproject.toml` | `version = "…"` |
 | `src/saemaul_mcp/__init__.py` | `__version__ = "…"` |
-| `CHANGELOG.md` | 맨 위 릴리스 제목 |
+| `docs/memo/CHANGELOG.md` | 맨 위 릴리스 제목 |
 
 ```bash
 grep -n '^version\|^__version__' pyproject.toml src/saemaul_mcp/__init__.py
-head -20 CHANGELOG.md
+head -20 docs/memo/CHANGELOG.md
 ```
 
 ## 3. 문서 대장
@@ -48,7 +50,8 @@ head -20 CHANGELOG.md
 | `docs/maintenance.md` | 이 문서 | — |
 | `CONTRIBUTING.md` | 자료를 더하고 고치는 법 | 데이터 스키마가 바뀌면 함께 |
 | `NOTICE.md` | 자료 출처와 권리 | 자료가 늘면 함께 |
-| `CHANGELOG.md` | 바뀐 내역 | 모든 변경 |
+| `docs/memo/` | 변경 기록 — 규격, 메모, CHANGELOG | 모든 변경 |
+| `git_change_memo_skill.md` | 에이전트가 기록을 남기는 절차 | `docs/memo/README.md` |
 | `LICENSE` | 코드 라이선스(MIT) | — |
 
 ### 두 언어 규칙
@@ -69,9 +72,12 @@ grep -c '^## ' docs/action-theory.ko.md docs/action-theory.en.md   # 절 수가 
 ### 서명이 있는 글
 
 `docs/action-theory.*`처럼 글쓴이와 날짜가 적힌 글은 내용을 고칠 때 상단 날짜도 함께 고칩니다.
-그 밖의 문서는 개정 이력을 `CHANGELOG.md` 한 곳에서만 관리합니다. 날짜를 두 곳에 두면 어긋납니다.
+그 밖의 문서는 개정 이력을 `docs/memo/` 한 곳에서만 관리합니다. 날짜를 두 곳에 두면 어긋납니다.
 
 ## 4. 고칠 때의 절차
+
+2번과 3번은 `.github/workflows/check.yml`이 푸시·PR마다 다시 돌려 줍니다.
+다만 **CI는 알려 줄 뿐 고치지 않습니다.** 4번의 기록과 5절의 버전 올림은 사람이 합니다.
 
 1. 원문을 고쳤으면 다시 생성합니다.
    ```bash
@@ -83,8 +89,8 @@ grep -c '^## ' docs/action-theory.ko.md docs/action-theory.en.md   # 절 수가 
    python3 tests/smoke_test.py
    ```
 3. 짝 문서를 같이 고쳤는지 확인합니다. (3절의 대장)
-4. `CHANGELOG.md`의 `## [미출시]` 아래에 한 줄 적습니다. **무엇을 왜 바꿨는지**를 적지,
-   어느 파일을 건드렸는지만 적지 않습니다.
+4. `docs/memo/`에 메모를 남기고 `docs/memo/CHANGELOG.md`의 `## [미출시]` 아래에 한 줄 겁니다.
+   절차는 [`git_change_memo_skill.md`](../git_change_memo_skill.md)를 따릅니다.
 5. 커밋합니다. 제목은 `<종류>: <무엇을 했는가>`.
 
 | 종류 | 쓰는 때 |
@@ -95,9 +101,23 @@ grep -c '^## ' docs/action-theory.ko.md docs/action-theory.en.md   # 절 수가 
 | `fix:` | 버그 수정 |
 | `chore:` | 버전 올림, 설정, 정리 |
 
+### 자동으로 도는 검사
+
+`.github/workflows/check.yml`이 Python 3.10과 3.12에서 세 가지를 봅니다.
+
+| 검사 | 무엇을 잡는가 |
+|---|---|
+| `--check` | 출처·문서·검색어 사전이 서로 맞는지 |
+| `tests/smoke_test.py` | 도구와 프롬프트가 실제로 뜨는지 |
+| 생성물 동기화 | 판독문을 고치고 `build_document.py`를 다시 돌리지 않은 경우 |
+
+셋째가 이 저장소에서 가장 자주 나는 사고입니다. 판독문에 줄을 더하면 그 뒤 단락 id가 전부
+밀리고, `cross_references`의 `passage`가 엉뚱한 대목을 가리키게 됩니다.
+
 ## 5. 릴리스
 
-1. `CHANGELOG.md`의 `[미출시]`를 새 버전 제목과 날짜로 바꾸고, 그 위에 빈 `[미출시]`를 다시 만듭니다.
+1. `docs/memo/CHANGELOG.md`의 `[미출시]`를 새 버전 제목과 날짜로 바꾸고, 그 위에 빈 `[미출시]`를
+   다시 만듭니다. 메모는 지우지 않고 그대로 쌓아 둡니다.
 2. `pyproject.toml`과 `src/saemaul_mcp/__init__.py`의 버전을 같은 값으로 올립니다.
 3. 커밋하고 태그를 붙입니다.
    ```bash

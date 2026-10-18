@@ -5,7 +5,7 @@
 새마을운동 자료를 누구나 쉽고 빠르게 찾게 해 주는 MCP 서버입니다.
 Claude, ChatGPT, Cursor, VS Code, Codex 등 MCP를 지원하는 어떤 에이전트에도 붙습니다.
 
-[English](README.md) · [새마을행동론 전문](docs/action-theory.ko.md) · [자료 권리](NOTICE.md) · [자료 추가·수정](CONTRIBUTING.md) · [저장소 관리](docs/maintenance.md) · [바뀐 내역](CHANGELOG.md) · [클라이언트별 설정](docs/clients.md)
+[English](README.md) · [새마을행동론 전문](docs/action-theory.ko.md) · [자료 권리](NOTICE.md) · [자료 추가·수정](CONTRIBUTING.md) · [저장소 관리](docs/maintenance.md) · [변경 기록](docs/memo/README.md) · [클라이언트별 설정](docs/clients.md)
 
 ---
 
