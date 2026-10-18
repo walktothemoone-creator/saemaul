@@ -47,7 +47,7 @@ Diligence, self-help, and cooperation are not separate virtues but a single chai
 | Self-help | Standing on one's own with that capability | Using tools while remaining the master of one's own judgment |
 | Cooperation | Self-reliant individuals combining through the division of labor | Designing and combining roles between people and AI, and among people |
 
-Cooperation is not merely getting along together; it is the division of labor. Only someone who can stand alone can take on a share of divided work, so self-help is the precondition of cooperation. Only a union built on contribution, not dependence, creates income and value that no one could produce alone.
+Cooperation is not merely getting along together; it is what divided work adds up to. Only someone who can stand alone can take on a share of divided work, so self-help is the precondition of cooperation. Only a union built on contribution, not dependence, creates income and value that no one could produce alone.
 
 ## Two Mirrors
 
@@ -57,7 +57,9 @@ The mirror of The Theory of Moral Sentiments looks inward. When the gaze of neig
 
 The mirror of The Wealth of Nations (1776) looks outward. The division of labor raises productivity, and the depth of that division depends on the extent of the market. Widening the roads widens the market, and only a wider market allows each person to specialize. The motive for the division of labor is not benevolence, but each person's rational choice to increase their own income.
 
-The bridge between the two mirrors is Émile Durkheim's The Division of Labour in Society (1893). People who take on different work come to depend on one another, and from that dependence a new solidarity is born. Cooperation, understood as the division of labor, is therefore both an economic and a moral proposition.
+The bridge between the two mirrors is Émile Durkheim's The Division of Labour in Society (1893). Durkheim did not treat the division of labor as a matter of productive efficiency alone. People who take on different work come to need one another, and that need becomes the bond that holds a modern society together. The division of labor is therefore the link between an economy and the society built on it.
+
+Cooperation grows on that link. It is not another word for the division of labor; it is what divided work adds up to. Each share is small on its own. But when the small forces exerted in each place are joined, they become a single force no one could have produced alone — and that force builds two things at once: the wealth of a nation on the outside, the solidarity of its people within. This is why cooperation is at once an economic and a moral proposition.
 
 Smith also warned of the shadow of the division of labor: a person who repeats only narrow tasks loses the sharpness of their judgment. In the AI age, this shadow returns as the risk that people hand their judgment over to machines and their own capacities wither.
 
@@ -85,7 +87,7 @@ flowchart LR
         A["Diligence<br/>builds capability"] --> B["Self-help<br/>stands on its own"]
     end
     subgraph outward["Outward · institutions"]
-        C["Cooperation = division of labor<br/>specialize, then combine"] --> D["Market and exchange<br/>widens the scope of division"]
+        C["Cooperation = Σ division of labor<br/>specialize, then combine"] --> D["Market and exchange<br/>widens the scope of division"]
     end
     B -->|"Durkheim's bridge"| C
     D --> E["Income<br/>the visible result<br/>of self-reliance"]

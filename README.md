@@ -44,8 +44,9 @@ They are not three separate virtues but one chain, each the precondition of the 
 | **Self-help** | Standing on your own with that capability | Using tools while remaining the master of your own judgment |
 | **Cooperation** | Self-reliant individuals combining through the division of labor | Designing roles between people and AI, and among people |
 
-Cooperation is not merely getting along; it is the division of labor. Only someone who can stand
-alone can take on a share of divided work — so self-help is the precondition of cooperation.
+Cooperation is not merely getting along; it is what the division of labor adds up to. Only someone
+who can stand alone can take on a share of divided work — so self-help is the precondition of
+cooperation.
 
 ### Two mirrors, one cycle
 
@@ -53,8 +54,14 @@ The inward mirror is *The Theory of Moral Sentiments* (1759): when the gaze of n
 within us as an impartial spectator, diligence and self-help stop being imposed and become our own
 standard. The outward mirror is *The Wealth of Nations* (1776): the division of labor raises
 productivity, and its depth is limited by the extent of the market. The bridge between them is
-Durkheim's *The Division of Labour in Society* (1893) — people who take on different work come to
-depend on one another, and from that dependence a new solidarity is born.
+Durkheim's *The Division of Labour in Society* (1893), which does not treat divided work as a matter
+of productive efficiency alone: people who take on different work come to need one another, and that
+need becomes the bond that holds a modern society together.
+
+The division of labor is thus the link between an economy and the society built on it, and
+cooperation is what the divided work adds up to on top of that link. Each share is small alone;
+joined, they become a force no one could produce by themselves, building the wealth of a nation
+outwardly and the solidarity of its people within.
 
 ```mermaid
 flowchart LR
@@ -62,7 +69,7 @@ flowchart LR
         A["Diligence<br/>builds capability"] --> B["Self-help<br/>stands on its own"]
     end
     subgraph outward["Outward · institutions"]
-        C["Cooperation = division of labor<br/>specialize, then combine"] --> D["Market and exchange<br/>widens the scope of division"]
+        C["Cooperation = Σ division of labor<br/>specialize, then combine"] --> D["Market and exchange<br/>widens the scope of division"]
     end
     B -->|"Durkheim's bridge"| C
     D --> E["Income<br/>the visible result<br/>of self-reliance"]
