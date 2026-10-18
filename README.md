@@ -73,6 +73,18 @@ of their judgment. In the AI age that shadow returns as the risk of handing our 
 
 ### What AI cannot replace
 
+That order — inward mirror first, outward mirror second — is not an accident. *The Theory of Moral
+Sentiments* came seventeen years before *The Wealth of Nations*. A person living inside a society
+takes the feeling and imagination that rise up in them and shares it; that sharing travels through a
+medium, becomes something people exchange, and the economy grows on top of it. The first is a moral
+sentiment, which only a human has. The second is built upon it.
+
+AI can render imagination as text, video or a metaverse, but what it renders is not a moral sentiment
+another human recognizes in themselves. Expression does not stand in for feeling. So the work left to
+people is to read, to imagine in the humanist sense, to express what they feel and let it grow.
+
+### What AI cannot replace
+
 People say AI will bring catastrophe. It has the capacity to. What it does not have is the capacity
 to replace us — not the history and civilisation people have already built, not the ones they have
 yet to build, not the development of society that happens in between.
@@ -105,6 +117,9 @@ So the theory needs an apparatus: primary records of what the movement actually 
 that tested it, criticism that contests it, and a way for anyone — or anyone's agent — to pull the
 evidence up in seconds and cite it precisely. That apparatus is this MCP server. The philosophy is
 the purpose; the server is the tool.
+
+This is also what the tool is *for*. Technology should not take over human judgment; it should put
+the evidence in front of a person so they can read, feel, and argue it out for themselves.
 
 It is built so the argument stays honest:
 
