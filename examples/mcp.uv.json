@@ -1,0 +1,9 @@
+{
+  "_comment": "uv가 설치돼 있으면 의존성을 따로 깔지 않아도 됩니다. uv 절대경로는 `which uv`로 확인하세요.",
+  "mcpServers": {
+    "saemaul": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": ["run", "/ABSOLUTE/PATH/TO/saemaul/saemaul_mcp_server.py"]
+    }
+  }
+}

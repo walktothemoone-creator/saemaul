@@ -1,0 +1,457 @@
+# 새마을 MCP — 출처 레지스트리 / Saemaul MCP — source registry
+# 용도: 에이전트가 근거·반론·이론 출처를 조회하는 기준 목록
+# 이 파일은 서지 목록이다. 원문 전문은 data/documents/ 에 따로 있다.
+#
+# 필드 규칙
+#   id                  : 영구 식별자 (변경 금지, 주장(Claim)이 이 id로 근거를 참조)
+#   layer               : primary(1차 기록) | scholarly(학술 연구) | theory(논리 정립 이론)
+#                         | ontology(온톨로지 철학) | infra(검증 인프라)
+#   stance              : supportive | critical | analytical | foundational  (새마을 평가 관점)
+#   theoretical_framework: 해당 출처가 기반한 경제학·사회학·철학 이론 (확인된 범위만 기재)
+#   verify_status       : url_verified(검색으로 URL 확인) | needs_check(서지·URL 원문 확인 필요)
+#   use_for             : 이 출처로 뒷받침하거나 반박할 수 있는 주제 태그
+#   document_id         : 이 저장소가 전문을 보유한 경우 data/documents/ 의 문서 id
+
+meta:
+  registry_version: "0.2"
+  scope: "1970년대 한국 새마을운동 — 1차 기록·학술 연구·이론. 새마을행동론(docs/action-theory.ko.md)의 명제를 검증할 근거 목록이다"
+  editorial_policy:
+    - "모든 주장(Claim)은 최소 1개 근거 출처와 연결한다"
+    - "평가 출처(supportive)와 비판 출처(critical)를 함께 연결해 논쟁을 지식으로 보존한다"
+    - "학술 출처는 theoretical_framework를 명시한다. 이론적 기반이 불분명한 출처는 근거 등급을 낮춘다"
+    - "전문을 보유한 1차 기록은 document_id로 연결하고, 단락 단위로 인용할 수 있게 한다"
+    - "확인되지 않은 서지 정보는 비워 두고 needs_check로 표시한다. 지어내지 않는다"
+
+sources:
+
+  # ───────────── 1차 기록 ─────────────
+  - id: SRC-PRI-001
+    layer: primary
+    title: "새마을운동 기록물 (유네스코 세계기록유산, 2013 등재)"
+    holder: ["국가기록원", "새마을운동중앙회"]
+    year: 2013
+    scope_note: "총 22,084건 (국가기록원 14,647건 / 새마을운동중앙회 7,437건)"
+    stance: foundational
+    theoretical_framework: null
+    url: "https://www.unesco.org/en/memory-world/archives-saemaul-undong-new-community-movement"
+    verify_status: url_verified
+    note: |
+      유네스코 세계기록유산 등재 페이지 확인(2026-10-18). 등재명 "Archives of Saemaul Undong (New Community Movement)",
+      등재 연도 2013(신청 2012), 신청국 대한민국, 대상 기간 1970-1979, 구성은 대통령 연설, 정부 문서, 마을 문서,
+      서한, 교본, 사진, 영상이라고 적혀 있다.
+      다만 유네스코 페이지는 건수를 밝히지 않는다. scope_note 의 "총 22,084건(국가기록원 14,647건 / 새마을운동중앙회 7,437건)"
+      내역은 아직 1차 확인 전이므로 그대로 인용하지 않는다. 소장기관별 목록 URL도 미확인.
+      개별 기록물은 기록물 번호를 하위 id로 부여 (예: SRC-PRI-001/NAK-xxxx)
+    use_for: [정책결정, 마을사업, 지도자교육, 성과보고]
+
+  - id: SRC-PRI-002
+    layer: primary
+    title: "국가기록원 온라인 공개: 1970~2000년대 새마을운동 변천사 (동영상 11건, 사진 23건)"
+    holder: ["국가기록원"]
+    year: 2015
+    stance: foundational
+    theoretical_framework: null
+    url: "https://theme.archives.go.kr/next/pages/new_newsletter/2015/11/sub1.html"
+    verify_status: url_verified
+    note: "1972 제1기 새마을지도자 교육, 1972 경기도 새마을사업, 1974 도시새마을 등 포함"
+    use_for: [지도자교육, 동원과참여, 도시새마을]
+
+  - id: SRC-PRI-003
+    layer: primary
+    title: "대통령 연설문·지시 (1970년 지방장관회의 새마을가꾸기 제창 등)"
+    holder: ["대통령기록관"]
+    year: 1970
+    stance: foundational
+    theoretical_framework: null
+    url: null
+    verify_status: needs_check
+    note: |
+      미확인(2026-10-18 웹 조사). 1970년 4월 22일 지방장관회의에서 '새마을가꾸기' 제창이 있었다는 2차 보도는 여러 건 있으나
+      회의 장소가 자료마다 엇갈리고(전주 / 전국 지방장관회의), 대통령기록관의 해당 연설·지시 기록 원문을 특정하지 못했다.
+      대통령기록관 연설기록 검색(pa.go.kr)에서는 1976.12.10 "전국 새마을 지도자 대회 유시" 등 다른 연설만 확인됐다.
+      확인 방법: 대통령기록관(pa.go.kr) 기록컬렉션 > 연설기록에서 1970년 4월 범위로 검색하거나,
+      대통령기록관 열람서비스(1522-1022)에 '1970년 지방장관회의' 기록 유무와 기록물 번호를 문의한다.
+      원문 일자·문서번호 확인 후 개별 id 부여
+    use_for: [정책의도, 국가담론]
+
+  - id: SRC-PRI-004
+    layer: primary
+    title: "내무부 연도별 새마을운동 보고서 / 새마을지도자 성공사례 수기"
+    holder: ["국가기록원", "새마을운동중앙회"]
+    year: "1971-1979"
+    stance: foundational
+    theoretical_framework: null
+    url: null
+    verify_status: needs_check
+    note: |
+      미확인(2026-10-18 웹 조사). 내무부 생산 연도별 새마을운동 보고서와 성공사례 수기의 개별 기록물 관리번호를 특정하지 못했다.
+      국가기록원 새마을운동 테마 검색(theme.archives.go.kr/next/semaul2016/searchResult.do)은 생산기관·생산연도·관리번호 범위 검색을
+      제공하지만, 검색 결과 자체를 이 레지스트리의 근거 URL로 쓸 수 없다.
+      확인 방법: 국가기록포털(archives.go.kr) 상세검색에서 생산기관 '내무부' + 생산연도 1971-1979 로 좁혀 건별 관리번호를 받거나,
+      국가기록원 열람문의(대전 042-481-1730, 성남 031-750-2001)에 해당 시리즈의 관리번호와 공개구분을 문의한다.
+      경쟁적 차등 지원(마을 등급·자재 배분) 수치의 1차 근거로 사용
+    use_for: [경쟁적지원, 마을등급, 자원배분, 지도자동기]
+
+  - id: SRC-PRI-005
+    layer: primary
+    title: "새마을운동 친필 구상 메모 (1972.4.26. 광주)"
+    authors: ["박정희"]
+    holder: ["국가기록원"]
+    year: 1972
+    scope_note: "대통령비서실 용지 친필 원고 17장. 근면·자조·협동의 '새마을 정신' 정식화, 정신혁명운동 규정, 자발성 요구, 성과 우수 부락 우선 지원 방침이 한 문서에 들어 있다."
+    stance: foundational
+    theoretical_framework: null
+    url: "https://theme.archives.go.kr/next/semaul/popup/popDetail.do?e_id=0047866236&flg=Y"
+    verify_status: url_verified
+    document_id: DOC-1972-0426
+    note: |
+      국가기록원 공개 페이지 확인(2026-10-18). 철제목·건제목 "새마을운동(박정희 대통령 친필문서)", 관리번호 CZ00000201,
+      생산연도 19720426, 생산기관 '지방행정연수원'(이관기관으로 보인다. 용지는 대통령비서실 것이다).
+      새마을운동아카이브(archives.saemaul.or.kr/record/byType/view/301273)의 같은 문서 기록은
+      1972.4.26. 광주 '새마을소득증대 촉진대회'를 격려하려고 구상한 메모이며 대통령비서실 메모지에 17쪽으로 쓰였다고 적어,
+      이 레지스트리의 '17장' 기술과 일치한다. 다만 그쪽은 이 문서를 '연설문 원고 초안'으로 분류한다.
+      공개구분과 복제·재배포 조건은 두 페이지 어디에도 표기가 없다. data/documents/DOC-1972-0426.meta.yaml 의 rights 참고.
+      이 저장소가 스캔과 판독문을 함께 보유한다. 판독문은 원본 대조 교정 전이다.
+    use_for: [정책의도, 새마을정신, 근면자조협동, 정신혁명론, 자발성, 경쟁적지원, 소득증대, 지도자, 부녀회, 국가담론]
+
+  # ───────────── 학술 연구 ─────────────
+  - id: SRC-SCH-001
+    layer: scholarly
+    title: "Rural Development (Studies in the Modernization of the Republic of Korea: 1945–1975)"
+    authors: ["Sung Hwan Ban", "Pal Yong Moon", "Dwight H. Perkins"]
+    year: 1980
+    publisher: "Council on East Asian Studies, Harvard University (배급: Harvard University Press)"
+    stance: analytical
+    theoretical_framework: ["개발경제학", "농업 부문 구조전환론"]
+    url: "https://archive.org/details/ruraldevelopment0000bans"
+    verify_status: url_verified
+    note: |
+      서지 확인(2026-10-18). Harvard East Asian Monographs 89. Cambridge, Mass.: Council on East Asian Studies,
+      Harvard University, 1980, 배급 Harvard University Press. ISBN 0674780426. xxv, 468쪽.
+      기존 publisher 표기 "Harvard University Press / KDI" 중 KDI 공동발행 여부는 확인하지 못해 뺐다.
+      url 은 인터넷아카이브 스캔본이며 access-restricted-item(도서관 대출 방식)이라 계정 로그인이 필요하다. 전문 공개본은 아니다.
+      Harvard University Press 현행 카탈로그에는 이 책의 페이지가 남아 있지 않다.
+    use_for: [농가소득, 도농격차, 정량평가]
+
+  - id: SRC-SCH-002
+    layer: scholarly
+    title: "Saemaul Undong: The 'Modernization' of Rural Poverty in South-Korea"
+    authors: ["Hans U. Luther"]
+    journal: "Internationales Asienforum"
+    stance: critical
+    theoretical_framework: ["내부 식민주의(internal colonialism)", "비판적 농촌개발론"]
+    url: "https://hasp.ub.uni-heidelberg.de/journals/iaf/article/view/2770"
+    verify_status: url_verified
+    key_claims: ["목표 대부분 미달성", "도농 격차 악화", "자발적 노동 프로그램의 강제성", "모델 수출 비권고"]
+    use_for: [도농격차, 동원과참여, 모델이전가능성]
+
+  - id: SRC-SCH-003
+    layer: scholarly
+    title: "Exporting the Saemaul spirit: South Korea's Knowledge Sharing Program and the 'rendering technical' of Korean development"
+    journal: "Geoforum"
+    volume: 75
+    pages: "29-39"
+    year: 2016
+    stance: critical
+    theoretical_framework: ["비판적 개발학", "'rendering technical' 개념 (개발의 탈정치화 비판)"]
+    url: "https://research.manchester.ac.uk/en/publications/exporting-the-saemaul-spirit-south-koreas-knowledge-sharing-progr/"
+    verify_status: url_verified
+    key_claims: ["정신혁명 서사가 냉전 맥락과 논쟁적 역사를 지움", "개발 경험의 기술적 문제로의 축소"]
+    use_for: [ODA서사, 정신혁명론, 모델이전가능성]
+
+  - id: SRC-SCH-004
+    layer: scholarly
+    title: "A study of Saemaul Undong in South Korea: Making self, memory and development (PhD thesis)"
+    publisher: "University of the Witwatersrand"
+    year: 2024
+    stance: analytical
+    theoretical_framework: ["푸코 통치성(governmentality)", "자기의 테크놀로지", "기억 연구(memory-work)", "생애사 방법론"]
+    url: "https://wiredspace.wits.ac.za/items/c367d499-9b80-43d1-b34d-7f26f7ac25b9"
+    verify_status: url_verified
+    key_claims: ["연구의 이념적 양극화 지적", "국가의 강제만이 아닌 농민의 수용·실행 측면 분석"]
+    use_for: [도덕감정, 주체형성, 동원과참여]
+
+  - id: SRC-SCH-005
+    layer: scholarly
+    title: "Saemaul Undong: Responsible leadership for just development in South Korea"
+    authors: ["I Sil Yoon", "Yoh-Chang Yoon"]
+    journal: "HTS Teologiese Studies/Theological Studies"
+    year: 2024
+    stance: critical
+    theoretical_framework: ["레비나스 타자의 윤리", "책임 리더십론"]
+    url: "https://hts.org.za/index.php/hts/article/view/9008"
+    verify_status: url_verified
+    use_for: [하향식접근, 리더십, 모델이전가능성]
+
+  - id: SRC-SCH-006
+    layer: scholarly
+    title: "[Book Review] Development and Defense in the Cold War New Village (허은 『냉전과 새마을』 서평)"
+    authors: ["Inga Kim Diederich"]
+    journal: "Korea Journal"
+    volume: "65(2)"
+    pages: "246-250"
+    year: 2025
+    stance: analytical
+    theoretical_framework: ["냉전사", "안보화된 개발(securitized development)", "농촌 통치 계보학"]
+    url: "https://www.accesson.kr/kj/assets/pdf/55852/journal-65-2-246.pdf"
+    verify_status: url_verified
+    reviews: SRC-SCH-008
+    note: |
+      정정(2026-10-18). 이 항목은 단행본이 아니라 서평이다. 서평 대상 단행본은 SRC-SCH-008 로 분리했다.
+      PDF 원문에서 확인: Korea Journal, vol. 65, no. 2 (Summer 2025): 246-250, doi 10.25024/kj.2025.65.2.246,
+      평자 Inga Kim Diederich (Colby College, Department of History).
+      DOI 는 KCI 랜딩 페이지(ART003217733)로 풀리며 제목 "[Book Review] Development and Defense in the Cold War New Village" 이 일치한다.
+    use_for: [냉전맥락, 국가안보, 농촌통치]
+
+  - id: SRC-SCH-007
+    layer: scholarly
+    title: "\"Flag Aid\": The Limitations of the Saemaul Undong Development Model and the Shortcomings of South Korea's ODA Approach"
+    authors: ["Bryan Roh"]
+    journal: "UT Synergy Journal"
+    year: 2016
+    stance: critical
+    theoretical_framework: ["국제개발협력(ODA) 정책론"]
+    url: "https://utsynergyjournal.org/2016/06"
+    verify_status: url_verified
+    use_for: [ODA서사, 모델이전가능성]
+
+  - id: SRC-SCH-008
+    layer: scholarly
+    title: "냉전과 새마을: 동아시아 냉전의 연쇄와 분단국가체제 (Naengjeon-gwa saemaeul)"
+    authors: ["허은"]
+    publisher: "창비"
+    year: 2022
+    stance: critical
+    theoretical_framework: ["냉전사", "안보화된 개발(securitized development)", "농촌 통치 계보학"]
+    url: "https://www.changbi.com/BookDetail?bookid=3772"
+    verify_status: url_verified
+    note: |
+      SRC-SCH-006(Korea Journal 65(2) 서평)의 서평 대상 단행본. 서지는 서평 원문과 창비 공식 도서 페이지에서 확인(2026-10-18).
+      창비 페이지: 허은 지음, 출간일 2022.03.25, 4부 구성. ISBN 은 서평에 9788936482978 로 적혀 있다.
+      쪽수는 자료마다 엇갈린다. Korea Journal 서평은 569쪽, 『인문논총』 79(4) 권혁은 서평은 596쪽으로 적었고
+      창비 페이지에는 쪽수 표기가 없어 어느 쪽도 확정하지 못했다. 그래서 pages 필드를 비워 두었다.
+      논지: 새마을을 동아시아 냉전의 연쇄(만주국 집단부락 - 말라야 신촌 - 남베트남 신생활촌 - 한국 대공새마을) 속에 놓고,
+      기존 연구가 안보 영역을 빼고 개발 영역에만 머물렀다고 비판하며 '1972년 분단국가체제'의 성격을 규명한다.
+    use_for: [냉전맥락, 국가안보, 농촌통치]
+
+  # ───────────── 논리 정립 이론 ─────────────
+  - id: SRC-THE-001
+    layer: theory
+    title: "The Theory of Moral Sentiments (도덕감정론)"
+    authors: ["Adam Smith"]
+    year: 1759
+    stance: foundational
+    theoretical_framework: ["공감(sympathy)", "공정한 관찰자(impartial spectator)"]
+    url: "https://www.gutenberg.org/ebooks/67363"
+    verify_status: url_verified
+    note: |
+      공개 전문 확인(2026-10-18). Project Gutenberg eBook #67363, "Public domain in the USA".
+      저본은 1777년 더블린 판(J. Beatty and C. Jackson)으로, 초판(1759) 자체가 아니다.
+      원제 전체: "The Theory of Moral Sentiments, Or, an Essay Towards an Analysis of the Principles by Which Men
+      Naturally Judge Concerning the Conduct and Character, First of Their Neighbours, and Afterwards of Themselves.
+      To Which Is Added, a Dissertation on the Origin of Languages."
+      인용할 때 판본을 밝힌다. 글래스고 판(Raphael·Macfie 편, Liberty Fund 1982)은 전문 공개본이 없다.
+    use_for: [도덕감정, 마을명예, 상호관찰]
+
+  - id: SRC-THE-002
+    layer: theory
+    title: "An Inquiry into the Nature and Causes of the Wealth of Nations (국부론)"
+    authors: ["Adam Smith"]
+    year: 1776
+    stance: foundational
+    theoretical_framework: ["분업", "자본축적", "보이지 않는 손", "중상주의 비판"]
+    url: "https://www.gutenberg.org/ebooks/3300"
+    verify_status: url_verified
+    note: "공개 전문 확인(2026-10-18). Project Gutenberg eBook #3300. 저본 판본은 해당 페이지에 명시돼 있지 않다."
+    use_for: [자원배분, 경쟁적지원, 축적]
+
+  - id: SRC-THE-003
+    layer: theory
+    title: "Governing the Commons"
+    authors: ["Elinor Ostrom"]
+    year: 1990
+    stance: foundational
+    publisher: "Cambridge University Press"
+    theoretical_framework: ["공유자원 자치 설계 원칙", "제도분석"]
+    url: "https://www.cambridge.org/core/books/governing-the-commons/A8BB63BC4A1433A50A3FB92EDBBB97D5"
+    verify_status: url_verified
+    note: |
+      출판사 페이지 확인(2026-10-18). 부제 "The Evolution of Institutions for Collective Action".
+      연결한 Cambridge Core 페이지는 2015년 Canto Classics 재간본이다. 초판은 1990년.
+      전문은 유료. 공개 전문본은 찾지 못했다.
+    use_for: [협동, 마을자치, 규칙형성]
+
+  - id: SRC-THE-004
+    layer: theory
+    title: "The Logic of Collective Action"
+    authors: ["Mancur Olson"]
+    year: 1965
+    stance: foundational
+    publisher: "Harvard University Press"
+    theoretical_framework: ["집단행동 문제", "무임승차", "선택적 유인"]
+    url: "https://www.hup.harvard.edu/books/9780674537514"
+    verify_status: url_verified
+    note: |
+      출판사 페이지 확인(2026-10-18). 부제 "Public Goods and the Theory of Groups".
+      연결한 HUP 페이지는 새 서문·부록을 붙인 1971년 페이퍼백(ISBN 9780674537514, Harvard Economic Studies 124)이다. 초판은 1965년.
+      전문은 유료. 공개 전문본은 찾지 못했다.
+    use_for: [협동, 경쟁적지원]
+
+  - id: SRC-THE-005
+    layer: theory
+    title: "The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens"
+    authors: ["Samuel Bowles"]
+    year: 2016
+    stance: foundational
+    publisher: "Yale University Press"
+    theoretical_framework: ["사회적 선호", "유인의 도덕감정 구축·구축효과(crowding in/out)"]
+    url: "https://yalebooks.yale.edu/book/9780300230512/the-moral-economy/"
+    verify_status: url_verified
+    note: |
+      출판사 페이지 확인(2026-10-18). Castle Lecture Series. 전자책 2016-05-24(ISBN 9780300221084),
+      페이퍼백 2017-08-08(ISBN 9780300230512). 전문은 유료.
+    use_for: [경쟁적지원, 도덕감정, 마을명예]
+
+  - id: SRC-THE-006
+    layer: theory
+    title: "Making Democracy Work"
+    authors: ["Robert D. Putnam", "Robert Leonardi", "Raffaella Y. Nanetti"]
+    year: 1993
+    publisher: "Princeton University Press"
+    stance: foundational
+    theoretical_framework: ["사회적 자본", "시민적 전통"]
+    url: "https://press.princeton.edu/books/paperback/9780691037387/making-democracy-work"
+    verify_status: url_verified
+    note: |
+      출판사 페이지 확인(2026-10-18). 공저자 Robert Leonardi, Raffaella Y. Nanetti 를 추가했다.
+      연결한 페이지는 1994-06-16 페이퍼백(ISBN 9780691037387)이다. 초판은 1993년.
+      부제 "Civic Traditions in Modern Italy" 는 이 페이지에 표기되지 않아 제목에 넣지 않았다. 전문은 유료.
+    use_for: [협동, 신뢰]
+
+  - id: SRC-THE-007
+    layer: theory
+    title: "Seeing Like a State"
+    authors: ["James C. Scott"]
+    year: 1998
+    stance: critical
+    publisher: "Yale University Press"
+    theoretical_framework: ["고도 근대주의 비판", "국가의 가독성(legibility)", "실천지(mētis)"]
+    url: "https://yalebooks.yale.edu/book/9780300078152/seeing-like-a-state/"
+    verify_status: url_verified
+    note: |
+      새마을론이 반드시 응답해야 할 대표 반론.
+      출판사 페이지 확인(2026-10-18). 부제 "How Certain Schemes to Improve the Human Condition Have Failed",
+      총서 The Institution for Social and Policy Studies. 연결한 페이지는 1999-02-08 페이퍼백(ISBN 9780300078152)이다.
+      초판은 1998년. 전문은 유료.
+    use_for: [하향식접근, 국가주도근대화]
+
+  - id: SRC-THE-008
+    layer: theory
+    title: "Development as Freedom"
+    authors: ["Amartya Sen"]
+    year: 1999
+    stance: critical
+    publisher: "Oxford University Press"
+    theoretical_framework: ["역량 접근(capability approach)", "자유로서의 발전"]
+    url: "https://global.oup.com/academic/product/development-as-freedom-9780192893307"
+    verify_status: url_verified
+    note: |
+      출판사 페이지 확인(2026-10-18). 연결한 OUP 페이지는 2001-01-18 페이퍼백(ISBN 9780192893307, 384쪽)이다.
+      초판은 1999년이며 미국판은 Alfred A. Knopf 에서 나왔다(이 대목은 OUP 페이지가 아니라 2차 자료에서 본 것이라 미확인으로 둔다).
+      전문은 유료. 인터넷아카이브에 올라온 사용자 업로드본은 권리 관계가 불분명해 링크하지 않았다.
+    use_for: [발전과자유, 권위주의발전]
+
+  - id: SRC-THE-009
+    layer: theory
+    title: "De la division du travail social (사회분업론)"
+    authors: ["Émile Durkheim"]
+    year: 1893
+    stance: foundational
+    publisher: "Paris: Félix Alcan"
+    theoretical_framework: ["유기적 연대", "분업과 도덕", "사회적 분화"]
+    url: "https://archive.org/details/deladivisiondutr00durkuoft"
+    verify_status: url_verified
+    note: |
+      새마을행동론에서 도덕감정론의 거울과 국부론의 거울을 잇는 다리. 자조에서 협동으로 넘어가는 자리의 이론적 근거.
+      공개 전문 확인(2026-10-18). 인터넷아카이브 1893년 Alcan 초판 스캔(토론토대 소장본), 전체 부제
+      "étude sur l'organisation des sociétés supérieures". 메타데이터상 열람 제한 없음, possible-copyright-status NOT_IN_COPYRIGHT.
+      BnF Gallica(ark:/12148/bpt6k207547)에도 같은 판본이 있다고 하나 Cloudflare 차단으로 직접 확인하지 못해 링크하지 않았다.
+    use_for: [협동, 분업, 연대, 도덕감정, 마을자치]
+
+  - id: SRC-THE-010
+    layer: theory
+    title: "Чем люди живы (사람은 무엇으로 사는가)"
+    authors: ["Lev Tolstoy"]
+    year: 1885
+    stance: foundational
+    theoretical_framework: ["기독교 윤리", "상호의존", "대가 없는 사랑"]
+    url: "https://www.gutenberg.org/ebooks/6157"
+    verify_status: needs_check
+    note: |
+      새마을행동론의 근원 명제. 자립이 수단이고 사랑과 정이 목적이라는 구분의 출처.
+      부분 확인(2026-10-18). url 은 Project Gutenberg #6157 "What Men Live By, and Other Tales"
+      (Louise·Aylmer Maude 영역, public domain in the USA)로, 러시아어 원문이 아니라 영역본이다. 러시아어 원문 공개본은 아직 확인 전.
+      year: 1885 를 확정하지 못해 needs_check 로 둔다. 1881년 발표로 적은 자료(LitRes 서지 등)와
+      1885년으로 적은 자료(marxists.org Tolstoy Archive)가 엇갈리고, 초출 지면을 1차로 확인하지 못했다.
+      확인 방법: 톨스토이 90권 전집(Юбилейное издание) 해당 권의 주석에서 초출 지면과 연도를 대조한다.
+    use_for: [사랑과정, 상호부조, 자립, 도덕감정]
+
+  # ───────────── 온톨로지 철학 ─────────────
+  - id: SRC-ONT-001
+    layer: ontology
+    title: "The Construction of Social Reality"
+    authors: ["John R. Searle"]
+    year: 1995
+    stance: foundational
+    publisher: "Free Press (Simon & Schuster)"
+    theoretical_framework: ["제도적 사실", "구성 규칙: X counts as Y in C", "집단 지향성"]
+    url: "https://www.simonandschuster.com/books/The-Construction-of-Social-Reality/John-R-Searle/9780684831794"
+    verify_status: url_verified
+    note: |
+      출판사 공식 페이지 확인(2026-10-18, Simon & Schuster). 연결한 것은 페이퍼백(ISBN 9780684831794)이다.
+      초판은 1995년 Free Press(New York). 그 초판 연도·발행처는 도서관 목록에서 본 것이고 이 페이지에는 표기가 없다. 전문은 유료.
+    use_for: [제도정식화, 프로토콜철학]
+
+  - id: SRC-ONT-002
+    layer: ontology
+    title: "Information technology — Top-level ontologies (TLO) — Part 2: Basic Formal Ontology (BFO) (ISO/IEC 21838-2:2021)"
+    authors: ["Barry Smith et al."]
+    year: 2021
+    publisher: "ISO/IEC"
+    stance: foundational
+    theoretical_framework: ["상위 형식 온톨로지", "연속체/발생체 구분"]
+    url: "https://webstore.iec.ch/en/publication/72703"
+    verify_status: url_verified
+    note: |
+      사양 확인(2026-10-18). ISO/IEC 21838-2:2021, 제1판, 발행 2021-11-30.
+      ISO 카탈로그 페이지(https://www.iso.org/standard/74572.html)는 자동 조회가 403으로 막혀 직접 열지 못했고,
+      동일 표준의 IEC Webstore 페이지에서 표제·판·발행일을 확인해 그쪽을 url 로 적었다. 사양 본문은 유료.
+      BFO 자체의 공개 자료(OWL 파일·가이드북)는 공식 사이트 https://bfo-ontology.github.io/ 에 있다.
+      그 사이트에는 Barry Smith 와 Pierre Grenon 이 이론을 세웠고 Alan Ruttenberg 등이 기여했다고 적혀 있으나,
+      ISO/IEC 21838-2 라는 언급은 없다. authors 의 "et al." 범위는 미확인으로 둔다.
+    use_for: [온톨로지상위구조]
+
+  # ───────────── 검증 인프라 ─────────────
+  - id: SRC-INF-001
+    layer: infra
+    title: "Ethereum Attestation Service (EAS)"
+    stance: foundational
+    theoretical_framework: null
+    note: |
+      공식 문서 확인(2026-10-18, docs.attest.org). "Ethereum Attestation Service (EAS) is an open-source
+      infrastructure public good for making attestations onchain or offchain" 이라고 적혀 있고,
+      "open-source, permissionless, tokenless, and free-to-use software" 라는 서술도 같은 문서에 있다.
+      구현은 스키마 등록 컨트랙트와 증명 컨트랙트 두 개다. 레퍼런스 구현 저장소
+      github.com/ethereum-attestation-service/eas-contracts 는 MIT 라이선스다.
+    url: "https://docs.attest.org/docs/welcome"
+    verify_status: url_verified
+    use_for: [주장서명, 기여기록, 앵커링]
+
+# ───────────── 제외 목록 (편집 결정 기록) ─────────────
+excluded:
+  - title: "지역발전 전략으로서 새마을운동에 대한 신문기사 텍스트 분석: 1970-2012 (지방행정연구 29(1), 2015)"
+    reason: "편집 결정: 영남대 소속 연구 배제"
+    decided_at: "2026-10-17"
+  - title: "영남대 소장 새마을 자료"
+    reason: "보류: 연구 논문이 아닌 기록물 소장처로, 1차 기록 포함 여부 추후 결정"
+    decided_at: "2026-10-17"

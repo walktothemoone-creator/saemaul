@@ -1,0 +1,179 @@
+# 서지 메타. build_document.py 가 판독문과 합쳐 DOC-1972-0426.yaml 을 만든다.
+# 이 파일만 사람이 고친다. 생성물(.yaml)을 직접 고치지 않는다.
+
+title: "새마을운동 (親筆 構想 메모)"
+title_en: "Saemaul Undong — handwritten planning notes"
+kind: manuscript
+author: "박정희"
+author_role: "대통령 (재임 1963-1979)"
+date: "1972-04-26"
+place: "광주"
+language: ko
+script_note: "국한문 혼용 친필. 판독문은 한자를 괄호로 병기했다."
+
+significance: |
+  새마을운동의 핵심 개념이 외부에 정식화되기 전, 발의자가 스스로 정리한 구상 메모다.
+  근면·자조·협동을 "새마을 정신"으로 묶는 대목(§6), 정신혁명운동이자 행동철학이라는 규정(§6),
+  자발성 요구(§10-(2))와 성과 우수 부락 우선 지원 방침(§8-(6), §10-(4))이 한 문서 안에 같이 있다.
+  이후의 공식 담론과 비판 연구가 각각 무엇을 근거로 삼는지 대조할 수 있는 출발점이다.
+  이 문서는 운동의 의도를 보여 줄 뿐, 실제 집행과 결과를 보여 주지는 않는다.
+
+holder: "국가기록원"
+stationery: "대통령비서실 용지"
+scan:
+  file: "data/scans/DOC-1972-0426.pdf"
+  pages: 34
+  leaves: 17
+  note: "국가기록원 원문뷰어 출력본. 원고 1장이 PDF 2면에 나뉘어 있다. 텍스트 층 없는 이미지 스캔."
+  captured_at: "2026-10-16"
+
+archival_reference:
+  record_number: "CZ00000201"
+  collection: "국가기록원 '새마을운동' 테마 기록물 — 철/건 제목 '새마을운동(박정희 대통령 친필문서)'"
+  producing_agency: "지방행정연수원"
+  url: "https://theme.archives.go.kr/next/semaul/popup/popDetail.do?e_id=0047866236&flg=Y"
+  verify_status: url_verified
+  note: |
+    확인(2026-10-18). 국가기록원 테마 상세 페이지에서 관리번호 CZ00000201, 생산연도 19720426,
+    기록물 유형 '문서', 생산기관 '지방행정연수원'을 확인했다. 설명에는 "1972년 4월 26일 광주에서 박정희 대통령이
+    친필로 작성한 문서"이며 "새마을운동의 이념, 철학, 실천 과제와 사업 계획, 지도 지침, 추진 방법"을 담았다고 적혀 있다.
+    생산기관이 '지방행정연수원'으로 적힌 것은 이관·소장 경로로 보이며, 용지가 대통령비서실 것이라는 이 메타의 기술과 어긋나지 않는다.
+    다만 둘의 관계는 확인 전이다.
+    대조 기록: 새마을운동아카이브(새마을운동중앙회) http://archives.saemaul.or.kr/record/byType/view/301273 는
+    같은 문서를 "박정희 대통령 친필 연설문 초안(새마을운동 관련 친필 원고)"으로 등록하고,
+    1972년 4월 26일 광주에서 열릴 '새마을소득증대 촉진대회'를 격려하려고 구상한 메모 형식의 글로 대통령비서실 메모지에
+    17쪽에 걸쳐 쓰였다고 설명한다. leaves: 17 과 stationery 기술이 이 기록으로 뒷받침된다.
+    그쪽은 이 문서를 '구상 메모'가 아니라 '연설문 원고 초안'으로 분류한다. 성격 규정이 갈리므로 인용할 때 둘 다 밝힌다.
+    미확인: 공개구분(전부공개/부분공개 등)은 두 페이지 어디에도 표기가 없다. 새마을운동아카이브 쪽 등록번호도 화면에 노출되지 않는다.
+
+transcription:
+  by: "저장소 기여자"
+  method: "친필 수기 판독, 한자 병기"
+  verify_status: needs_check
+  note: "원본 스캔과 한 줄씩 대조한 교정 기록이 아직 없다. 인용 시 스캔 원본을 함께 확인한다."
+
+rights:
+  status: needs_check
+  note: |
+    공공기록물의 복제·재배포 조건을 확인하기 전까지 이 스캔을 재배포 가능한 자료로 표시하지 않는다.
+    서버는 이 상태를 그대로 반환한다. NOTICE.md 참고.
+
+    조사 결과(2026-10-18). 재배포 가능 여부를 확인하지 못했다. 근거는 다음과 같다.
+      - 국가기록원 저작권정책(https://www.archives.go.kr/next/neworgan/copyrightProtection.do)은
+        "저작권법 제24조의2(공공저작물의 자유이용)에 따라 ... 공공누리(KOGL) 표시를 부착하고 있으며, 별도의 이용허락 없이
+        자유이용이 가능합니다"라고 밝힌다. 즉 자유이용 여부는 개별 저작물의 공공누리 마크 부착으로 판단한다.
+      - 이 기록물(CZ00000201)의 국가기록원 상세 페이지에는 공공누리 마크도 유형 표기도 없다.
+        해당 테마 사이트 하단에는 "Copyright(c) National Archives of Korea all rights reserved." 만 있다.
+      - 따라서 공공누리 제1~4유형 중 어디에 해당하는지, 또는 아예 적용 대상이 아닌지 확정할 수 없다.
+        유형이 2 또는 4라면 비상업적 이용만, 3 또는 4라면 변경 금지가 되므로 추정으로 적지 않는다.
+
+    확인하려면 다음을 문의한다.
+      1) 국가기록원 열람문의 — 대전 042-481-1730 / 성남 031-750-2001, 2005 (월~금 09:00~18:00).
+         질문: 관리번호 CZ00000201 '새마을운동(박정희 대통령 친필문서)'의 (a) 공개구분,
+         (b) 공공누리 적용 여부와 유형, (c) 원문 스캔의 제3자 재배포 허용 범위.
+      2) 국가기록포털 담당자 — 031-750-2026 (온라인 공개 페이지의 이용조건 표기 관련).
+      3) 새마을운동중앙회 새마을운동아카이브 자료문의 — 031-620-2372 / 031-620-2496.
+         질문: 같은 문서(연번 301273)의 소장 주체와 이용·복제 조건, 국가기록원 소장본과의 관계.
+      4) 저작권 주체가 대통령기록물에 해당하는지 갈릴 수 있으므로, 필요하면 대통령기록관에도 같은 질문을 한다.
+
+topics: [새마을정신, 근면자조협동, 정신혁명론, 자발성, 경쟁적지원, 소득증대, 지도자, 부녀회, 동원과참여, 정책의도]
+
+section_headings:
+  "1": "전국에 전개되고 있는 새마을운동 (서두)"
+
+# 단락과 연구·이론 출처를 잇는다. 1차 기록의 한 대목이 어떤 논쟁의 근거가 되는지 보여 준다.
+# relation: interprets(해석 틀) | contested_by(이 대목을 반박·문제화) | corroborates(다른 기록으로 뒷받침)
+cross_references:
+  - passage: p026
+    note: "협동의 능률 논거(1+1=2+α). 집단행동 이론으로 검토할 대목."
+    links:
+      - {source: SRC-THE-003, relation: interprets}
+      - {source: SRC-THE-004, relation: interprets}
+
+  - passage: p028
+    note: "근면·자조·협동을 '새마을 정신'으로 묶는 정의 대목."
+    links:
+      - {source: SRC-THE-001, relation: interprets}
+      - {source: SRC-THE-005, relation: interprets}
+
+  - passage: p030
+    note: "'정신혁명운동이요 행동철학'. 정신혁명 서사의 원문 근거이자 비판 연구의 표적."
+    links:
+      - {source: SRC-SCH-003, relation: contested_by}
+      - {source: SRC-SCH-004, relation: interprets}
+      - {source: SRC-SCH-008, relation: contested_by}
+
+  - passage: p033
+    note: "사업 선정을 부락민 총의로 결정한다는 원칙."
+    links:
+      - {source: SRC-THE-003, relation: interprets}
+      - {source: SRC-SCH-002, relation: contested_by}
+
+  - passage: p035
+    note: "타 부락 모방 일변도 불가. 지역 지식 존중과 표준화 압력 사이의 긴장."
+    links:
+      - {source: SRC-THE-007, relation: interprets}
+      - {source: SRC-SCH-003, relation: contested_by}
+
+  - passage: p043
+    note: "지도자 유무가 사업 성패를 가른다는 판단."
+    links:
+      - {source: SRC-PRI-002, relation: corroborates}
+      - {source: SRC-SCH-005, relation: contested_by}
+
+  - passage: p057
+    note: "성과 좋은 부락에 집중 투자. 경쟁적 차등 지원의 원문 근거."
+    links:
+      - {source: SRC-PRI-004, relation: corroborates}
+      - {source: SRC-THE-004, relation: interprets}
+      - {source: SRC-THE-005, relation: interprets}
+
+  - passage: p064
+    note: "성과를 서두르지 말라는 지시. 조림 40~50년, 후손에게 물려줄 사업이라는 시간관."
+    links:
+      - {source: SRC-THE-008, relation: interprets}
+
+  - passage: p065
+    note: "'위에서 강요해서 하는 것은 성공 못 한다'. 자발성 주장과 강제성 비판이 정면으로 부딪히는 대목."
+    links:
+      - {source: SRC-SCH-002, relation: contested_by}
+      - {source: SRC-SCH-005, relation: contested_by}
+      - {source: SRC-THE-007, relation: contested_by}
+      - {source: SRC-SCH-004, relation: interprets}
+
+  - passage: p066
+    note: "게으른 마을은 끝까지 돕지 않는다. 선별 지원의 배제 측면."
+    links:
+      - {source: SRC-SCH-002, relation: contested_by}
+      - {source: SRC-THE-005, relation: interprets}
+
+  - passage: p068
+    note: "근면·자조·협동 왕성한 부락 우선 지원 방침의 확고한 선언."
+    links:
+      - {source: SRC-PRI-004, relation: corroborates}
+      - {source: SRC-THE-002, relation: interprets}
+      - {source: SRC-THE-004, relation: interprets}
+      - {source: SRC-SCH-002, relation: contested_by}
+
+  - passage: p070
+    note: "부녀회원의 역할을 성공 조건으로 지목."
+    links:
+      - {source: SRC-SCH-004, relation: interprets}
+
+  - passage: p071
+    note: "부락지도자 발굴·양성과 기록 보존 지시. 지도자 교육 체계로 이어진다."
+    links:
+      - {source: SRC-PRI-002, relation: corroborates}
+      - {source: SRC-SCH-005, relation: contested_by}
+
+  - passage: p072
+    note: "농촌에 한정하지 않는 범국민운동 선언. 도시새마을로 이어진다."
+    links:
+      - {source: SRC-PRI-002, relation: corroborates}
+      - {source: SRC-SCH-008, relation: contested_by}
+
+  - passage: p073
+    note: "부작용을 인정하되 비방이 아니라 시정으로 대응하라는 지시."
+    links:
+      - {source: SRC-SCH-002, relation: contested_by}
+      - {source: SRC-SCH-001, relation: interprets}

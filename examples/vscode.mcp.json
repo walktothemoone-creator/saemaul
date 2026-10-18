@@ -1,0 +1,10 @@
+{
+  "// 설명": "VS Code(Copilot MCP)용. 이 파일을 저장소의 .vscode/mcp.json 으로 복사하세요. 키 이름이 servers 입니다.",
+  "servers": {
+    "saemaul": {
+      "type": "stdio",
+      "command": "python3",
+      "args": ["${workspaceFolder}/saemaul_mcp_server.py"]
+    }
+  }
+}

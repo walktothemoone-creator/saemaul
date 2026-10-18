@@ -1,0 +1,46 @@
+# 검색어 확장 사전. 사람이 쓰는 말과 사료의 말이 다를 때를 메운다.
+# Query expansion. Bridges everyday wording, period wording, hanja and English.
+#
+# 왼쪽 열쇠말로 검색하면 오른쪽 낱말도 함께 찾는다. 반대 방향도 적용된다.
+# 한 줄을 추가할 때는 "같은 것을 가리키는 다른 말"만 넣는다. 연관어는 넣지 않는다.
+
+aliases:
+  새마을정신: [근면, 자조, 협동, 勤勉, 自助, 協同]
+  새마을운동: [새마을, 새마을 운동, 잘살기운동, 잘 살기 운동, Saemaul, Saemaul Undong]
+  마을: [부락, 동리, 部落, 洞里, village]
+  주민: [부락민, 농민, 部落民, 農民]
+  지도자: [부락지도자, 새마을지도자, 指導者, leader]
+  부녀회: [부녀회원, 婦女會員, 여성, 부녀자]
+  공무원: [관리, 公務員, 政府官吏, 도지사, 시장, 군수]
+  소득: [소득증대, 所得, 所得增大, income]
+  농로: [農路, 마을안길, 길]
+  지붕개량: [지붕, 초가지붕]
+  정신혁명: [정신혁명운동, 精神革命運動, 정신개조]
+  자발성: [자발적, 자발적운동, 自發的運動, 총의, 總意]
+  강제: [강요, 동원, 强要, 動員]
+  경쟁적지원: [우선지원, 집중투자, 차등지원, 優先的, 集中投資]
+  협동: [상부상조, 단결, 協同, 相扶相助, 團結]
+  가난: [빈곤, 빈곤탈피, 貧困, poverty]
+  도농격차: [도시농촌격차, 농촌빈곤, rural urban gap]
+  박정희: [대통령, 朴正熙, Park Chung-hee, Park Chung Hee]
+  유네스코: [세계기록유산, UNESCO, Memory of the World]
+  국가기록원: [기록원, National Archives of Korea]
+
+  # 영어로 묻는 사람을 위해. 자료는 한국어라서 이 다리가 없으면 아무것도 걸리지 않는다.
+  # English entry points — the corpus is Korean, so these bridges matter.
+  diligence: [근면, 勤勉, hard work]
+  self-help: [자조, 自助, self help, selfhelp]
+  cooperation: [협동, 協同, cooperate, collective action]
+  spirit: [정신, 精神, 새마을정신, saemaul spirit]
+  voluntary: [자발성, 자발적, 自發的, voluntarism, volunteer]
+  coercion: [강요, 강제, 동원, 强要, forced, mobilization, mobilisation]
+  income: [소득, 소득증대, 所得增大, earnings]
+  leader: [지도자, 부락지도자, 指導者, leadership]
+  village: [마을, 부락, 部落, villages, hamlet]
+  farmer: [농민, 農民, farmers, peasant, peasants]
+  women: [부녀회, 부녀회원, 여성, 婦女會員]
+  government: [정부, 政府, state, 공무원]
+  poverty: [가난, 빈곤, 貧困, poor]
+  road: [농로, 農路, farm road, village road]
+  roof: [지붕개량, 지붕, roof improvement]
+  forestry: [조림, 조림사업, 造林事業, afforestation]

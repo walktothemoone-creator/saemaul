@@ -1,0 +1,9 @@
+{
+  "_comment": "Claude Desktop, Claude Code, Cursor, Cline, Continue, Windsurf 등 mcpServers 형식을 쓰는 클라이언트용. /ABSOLUTE/PATH/TO/saemaul 를 내려받은 위치로 바꾸세요.",
+  "mcpServers": {
+    "saemaul": {
+      "command": "python3",
+      "args": ["/ABSOLUTE/PATH/TO/saemaul/saemaul_mcp_server.py"]
+    }
+  }
+}

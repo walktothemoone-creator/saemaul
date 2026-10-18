@@ -1,0 +1,10 @@
+{
+  "// 설명": "Zed 용. Zed 설정(settings.json)의 context_servers 에 넣으세요.",
+  "context_servers": {
+    "saemaul": {
+      "source": "custom",
+      "command": "python3",
+      "args": ["/ABSOLUTE/PATH/TO/saemaul/saemaul_mcp_server.py"]
+    }
+  }
+}
