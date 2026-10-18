@@ -58,10 +58,12 @@ Durkheim's *The Division of Labour in Society* (1893), which does not treat divi
 of productive efficiency alone: people who take on different work come to need one another, and that
 need becomes the bond that holds a modern society together.
 
-The division of labor is thus the link between an economy and the society built on it, and
-cooperation is what the divided work adds up to on top of that link. Each share is small alone;
-joined, they become a force no one could produce by themselves, building the wealth of a nation
-outwardly and the solidarity of its people within.
+The division of labor is thus the link between an economy and the society built on it. When finely
+divided work is joined into an organic cooperation (協動 — joined force in motion), society gains the
+power to move forward. Each share is small alone; gathered, they become a force no one could produce
+by themselves. The cooperation that the sum of divided work brings forth — and the divided work that
+in turn operates upon that firm cooperation — is at once the economic principle behind a nation's
+prosperity and the moral norm that binds fragmented individuals into solidarity.
 
 ```mermaid
 flowchart LR
