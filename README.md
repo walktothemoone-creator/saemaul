@@ -1,12 +1,13 @@
 # Saemaul MCP
 
-**A declaration of self-reliance for the AI age — and the evidence to argue about it.**
+**A declaration of self-reliance and coexistence for the age of physical AI — and the evidence to
+argue about it.**
 
 An MCP server that makes sources on the Saemaul Undong (새마을운동, South Korea's "New Village
 Movement", 1970s) fast to find and safe to cite, from any MCP-capable agent — Claude, ChatGPT,
 Cursor, VS Code, Codex and others.
 
-[한국어](README.ko.md) · [Action Theory (full draft)](docs/action-theory.en.md) · [Rights notice](NOTICE.md) · [Contributing](CONTRIBUTING.md) · [Client setup](docs/clients.md)
+[한국어](README.ko.md) · [Action Theory (full text)](docs/action-theory.en.md) · [Rights notice](NOTICE.md) · [Contributing](CONTRIBUTING.md) · [Maintenance](docs/maintenance.md) · [Changelog](CHANGELOG.md) · [Client setup](docs/clients.md)
 
 ---
 
@@ -24,15 +25,20 @@ entered UNESCO's Memory of the World Register in 2013. It has been praised as a 
 and criticized as top-down mobilization under an authoritarian state.
 
 *Saemaul Action Theory* does not try to settle that argument. It is a **normative reinterpretation**:
-it takes from the movement's collective form the one thing worth carrying into the age of AI — the
-spirit of individual self-reliance.
+it takes from the movement's collective form the one thing worth carrying into the age of physical
+AI — the spirit of individual self-reliance.
 
 That reinterpretation comes from reading four texts over one another: **Park Chung-hee's handwritten
 planning note on Saemaul Undong** (26 April 1972 — the primary source in this repository), Adam
 Smith's **The Theory of Moral Sentiments** (1759) and **The Wealth of Nations** (1776), and Tolstoy's
 **"What Men Live By"** (1885). The note says what diligence, self-help and cooperation were meant to
 do; Smith's two books explain the conditions under which such virtues work; Tolstoy asks what all of
-it is for. Saemaul MCP grew out of reading them together.
+it is for.
+
+What that reinterpretation addresses is now. In the great transition of **physical AI** — the passage
+from an age of income earned by labor to an age of income earned by capital — the power to remain
+the master of one's judgment and to contribute a share to divided work only grows scarcer. Saemaul
+MCP grew out of reading these four texts together.
 
 ### The chain of three virtues
 
