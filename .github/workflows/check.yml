@@ -1,0 +1,49 @@
+# 푸시와 PR마다 저장소가 성한지 검사한다. 고치지는 않는다 — 깨진 곳을 알려 줄 뿐이다.
+# 사람이 직접 하는 일(docs/memo/ 기록, 버전 올리기)은 git_change_memo_skill.md 를 따른다.
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # pyproject 의 requires-python = ">=3.10". 아래위 끝을 본다.
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: 의존성 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 자료 검사 — 출처·문서·검색어 사전이 서로 맞는가
+        run: python saemaul_mcp_server.py --check
+
+      - name: 스모크 테스트 — 도구와 프롬프트가 실제로 뜨는가
+        run: python tests/smoke_test.py
+
+      - name: 생성물이 판독문과 맞는가
+        # transcript 를 고치고 build_document.py 를 다시 돌리지 않으면
+        # 단락 id 가 밀려 cross_references 가 엉뚱한 대목을 가리킨다.
+        run: |
+          for t in data/documents/*.transcript.txt; do
+            python scripts/build_document.py "$t"
+          done
+          if ! git diff --quiet -- data/documents/; then
+            echo "::error::판독문과 생성물이 어긋납니다. scripts/build_document.py 를 다시 돌리고 결과를 함께 커밋하십시오."
+            git diff --stat -- data/documents/
+            exit 1
+          fi
